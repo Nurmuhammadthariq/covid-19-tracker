@@ -2,3 +2,41 @@
     flex: 1;
     cursor: pointer;
 }
+
+.infobox:not(:last-child) {
+    margin-right: 15px;
+}
+
+.infobox--selected {
+    border-top: 10px solid greenyellow;
+}
+
+.infobox--blue {
+    border-color: #233287;
+}
+
+.infobox--red {
+    border-color: red;
+}
+
+.infoBox__cases {
+    color:#233287;
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.infobox__cases--red {
+    color: red;
+}
+
+.infobox__cases--green {
+    color: lightgreen;
+}
+
+.infoBox__total {
+    color: #6c757d;
+    font-weight: 700 !important;
+    font-size: 0.8rem !important;
+    margin-top: 15px !important;
+}

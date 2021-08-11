@@ -13,7 +13,12 @@ const Map = ({ countries, casesType, center, zoom }) => {
 
   return (
     <div className="map_box">
-      <MapContainer className="map" center={center} zoom={zoom}>
+      <MapContainer
+        casesType={casesType}
+        className="map"
+        center={center}
+        zoom={zoom}
+      >
         <ChangeView center={center} zoom={zoom} />
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

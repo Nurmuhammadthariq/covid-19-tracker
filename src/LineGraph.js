@@ -17,7 +17,7 @@ const options = {
     intersect: false,
     callbacks: {
       label: function (tooltipItem, data) {
-        return numeral(tooltipItem.value).format('+0,0');
+        return `+${numeral(tooltipItem).format('+0,0')}`;
       },
     },
   },
@@ -39,7 +39,7 @@ const options = {
         ticks: {
           // Include a dollar sign in the ticks
           callback: function (value, index, values) {
-            return numeral(value).format('0a');
+            return `+${numeral(value).format('0a')}`;
           },
         },
       },
@@ -70,7 +70,7 @@ const LineGraph = ({ casesType, ...props }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      await fetch('https://disease.sh/v3/covid-19/historical/all?lastdays=120')
+      await fetch('https://disease.sh/v3/covid-19/historical/all?lastdays=30')
         .then((response) => {
           return response.json();
         })
